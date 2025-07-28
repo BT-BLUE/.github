@@ -29,7 +29,7 @@ Este perfil reúne os repositórios da nossa equipe de tecnologia e automações
 ## 🌐 Contato
 
 - 🌍 [btblue.com.br](https://btcreditos.com.br)
-- 📧 contato@btblue.com.br
+- 📧 administrativo@btblue.com.br
 - 📸 [Instagram](https://instagram.com/btcreditos)
 - 💼 [LinkedIn](https://linkedin.com/company/btcreditos-filial)
 
