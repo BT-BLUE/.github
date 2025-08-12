@@ -38,12 +38,25 @@ O processo é dividido em **etapas claras**, garantindo rastreabilidade e qualid
 ### **1. Desenvolvimento de Funcionalidades**
 ```mermaid
 gitGraph
-   commit id: "Início develop"
-   branch feature/minha-func
-   commit id: "Implementa função"
-   commit id: "Testa função"
-   checkout develop
-   merge feature/minha-func
+    commit id: "Initial commit"
+    branch develop
+    checkout develop
+    commit id: "Feature A"
+    commit id: "Feature B"
+    commit id: "Último commit develop"
+    
+    branch release/1.2
+    checkout release/1.2
+    commit id: "Ajustes finais"
+    commit id: "Bump version 1.2.0"
+    
+    checkout main
+    merge release/1.2
+    commit id: "v1.2.0" tag: "v1.2.0"
+    
+    checkout develop
+    merge release/1.2
+    commit id: "Back-merge release"
 ```
 
 ### **2. Preparação para Homologação (Release)**
