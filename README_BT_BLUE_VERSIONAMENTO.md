@@ -62,25 +62,34 @@ gitGraph
 ### **2. Preparação para Homologação (Release)**
 ```mermaid
 gitGraph
-   commit id: "Último commit develop"
-   branch release/1.2
-   commit id: "Ajustes finais"
-   checkout main
-   merge release/1.2 tag: "v1.2.0"
-   checkout develop
-   merge release/1.2
+    commit id: "Início"
+    branch develop
+    checkout develop
+    commit id: "Último commit develop"
+    branch release/1.2
+    commit id: "Ajustes finais"
+    checkout main
+    merge release/1.2 tag: "v1.2.0"
+    checkout develop
+    merge release/1.2
 ```
 
 ### **3. Correções Urgentes (Hotfix)**
 ```mermaid
 gitGraph
-   commit id: "Prod bug"
-   branch hotfix/1.2.1
-   commit id: "Corrige bug crítico"
-   checkout main
-   merge hotfix/1.2.1 tag: "v1.2.1"
-   checkout develop
-   merge hotfix/1.2.1
+    commit id: "v1.2.0"
+    branch develop
+    checkout develop
+    commit id: "New features"
+    checkout main
+    commit id: "Prod bug"
+    branch hotfix/1.2.1
+    checkout hotfix/1.2.1
+    commit id: "Corrige bug crítico"
+    checkout main
+    merge hotfix/1.2.1 tag: "v1.2.1"
+    checkout develop
+    merge hotfix/1.2.1
 ```
 
 ---
