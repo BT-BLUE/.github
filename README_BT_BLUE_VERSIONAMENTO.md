@@ -41,22 +41,13 @@ gitGraph
     commit id: "Initial commit"
     branch develop
     checkout develop
-    commit id: "Feature A"
-    commit id: "Feature B"
-    commit id: "Último commit develop"
-    
-    branch release/1.2
-    checkout release/1.2
-    commit id: "Ajustes finais"
-    commit id: "Bump version 1.2.0"
-    
-    checkout main
-    merge release/1.2
-    commit id: "v1.2.0" tag: "v1.2.0"
-    
+    commit id: "Início develop"
+    branch feature/minha-func
+    checkout feature/minha-func
+    commit id: "Implementa função"
+    commit id: "Testa função"
     checkout develop
-    merge release/1.2
-    commit id: "Back-merge release"
+    merge feature/minha-func
 ```
 
 ### **2. Preparação para Homologação (Release)**
@@ -139,23 +130,28 @@ MAJOR.MINOR.PATCH
 
 ```mermaid
 gitGraph
-   commit id: "Start"
-   branch develop
-   commit id: "Dev setup"
-   branch feature/func1
-   commit id: "Func1"
-   checkout develop
-   merge feature/func1
-   branch release/1.0
-   commit id: "Release prep"
-   checkout main
-   merge release/1.0 tag: "v1.0.0"
-   checkout develop
-   merge release/1.0
-   branch hotfix/1.0.1
-   commit id: "Bugfix"
-   checkout main
-   merge hotfix/1.0.1 tag: "v1.0.1"
-   checkout develop
-   merge hotfix/1.0.1
+    commit id: "Start"
+    branch develop
+    checkout develop
+    commit id: "Dev setup"
+    branch feature/func1
+    checkout feature/func1
+    commit id: "Func1"
+    checkout develop
+    merge feature/func1
+    branch release/1.0
+    checkout release/1.0
+    commit id: "Release prep"
+    checkout main
+    merge release/1.0 tag: "v1.0.0"
+    checkout develop
+    merge release/1.0
+    checkout main
+    branch hotfix/1.0.1
+    checkout hotfix/1.0.1
+    commit id: "Bugfix"
+    checkout main
+    merge hotfix/1.0.1 tag: "v1.0.1"
+    checkout develop
+    merge hotfix/1.0.1
 ```
