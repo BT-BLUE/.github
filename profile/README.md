@@ -35,7 +35,7 @@ Combinamos **inteligência jurídica**, **automação avançada** e **análise d
 
 ### Integrações & APIs
 - **Ploomes CRM** - Gestão de relacionamento com clientes
-- **DataLawyer -  Plataforma de jurimetria
+- **DataLawyer** -  Plataforma de jurimetria
 - **n8n** - Orquestração de workflows automatizados
 
 ### Monitoramento & Analytics
